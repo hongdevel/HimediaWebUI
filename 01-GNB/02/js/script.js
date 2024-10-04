@@ -18,13 +18,14 @@ $(function () {
     });
     // 마우스 휠을 조작했을 때
     $window.on("wheel", function (e) {
-        console.log(e);
-        if (e.originalEvent.wheelData > 0) {
-            // 휠 올림
-            $header.removeClass("hide");
-        } else {
-            // 휠 내림
-            $header.addClass("hide");
-        }
+        // console.log(e);
+        // if (e.originalEvent.wheelData > 0) {
+        //     // 휠 올림
+        //     $header.removeClass("hide");
+        // } else {
+        //     // 휠 내림
+        //     $header.addClass("hide");
+        // }
+        e.originalEvent.wheelData > 0 ? $header.removeClass("hide") : $header.addClass("hide");
     });
 });
