@@ -4,21 +4,18 @@ $(function () {
     const $tabCon = $(".tab-con-item");
 
     console.log($tabMenu, $tabCon);
-
-    $tabMenu.removeClass("on");
-    $tabMenu.eq(0).addClass("on");
-
-    $tabCon.hide();
-    $tabCon.eq(0).show();
+    tabAction(0);
 
     $tabMenu.on("click", function (e) {
         e.preventDefault();
 
         const tabIdx = $(this).index();
-        console.log(tabIdx);
+        tabAction(tabIdx);
+    });
+    function tabAction(index) {
         $tabCon.hide();
         $tabMenu.removeClass("on");
-        $tabMenu.eq(tabIdx).addClass("on");
-        $tabCon.eq(tabIdx).show();
-    });
+        $tabMenu.eq(index).addClass("on");
+        $tabCon.eq(index).show();
+    }
 });
