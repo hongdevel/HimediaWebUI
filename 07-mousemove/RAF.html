@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Request Animation Frame</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      img {
+        vertical-align: top;
+      }
+
+      body {
+        background: skyblue;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .wrap {
+        width: 100%;
+        border: 1px solid #fff;
+      }
+
+      .cat {
+        width: 245px;
+        height: 184px;
+        background: tomato;
+      }
+
+      .info {
+        position: absolute;
+        left: 50%;
+        bottom: 50px;
+        transform: translateX(-50%);
+        font-size: 5vw;
+        color: #fff;
+      }
+
+      /* 고양이가 달린다 */
+      @keyframes catRunning {
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- .wrap>.cat+.info -->
+    <div class="wrap">
+      <div class="cat"></div>
+      <div class="info">0</div>
+    </div>
+  </body>
+</html>
